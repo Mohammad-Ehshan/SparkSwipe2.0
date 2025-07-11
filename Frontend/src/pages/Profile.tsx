@@ -14,7 +14,7 @@
 //   // Fetch user profile data
 //  const fetchUserProfile = async () => {
 //   try {
-//     const response = await axios.get('http://localhost:4000/api/v1/user/getuser', {
+//     const response = await axios.get('https://sparkswipebackend.onrender.com/api/v1/user/getuser', {
 //       withCredentials: true,
 //     });
 
@@ -35,9 +35,9 @@
 //     setLoading(true);
 //     try {
 //       let endpoint = '';
-//       if (tab === 'posted') endpoint = 'http://localhost:4000/api/v1/project/posted';
-//       if (tab === 'liked') endpoint = 'http://localhost:4000/api/v1/project/liked';
-//       if (tab === 'saved') endpoint = 'http://localhost:4000/api/v1/project/saved';
+//       if (tab === 'posted') endpoint = 'https://sparkswipebackend.onrender.com/api/v1/project/posted';
+//       if (tab === 'liked') endpoint = 'https://sparkswipebackend.onrender.com/api/v1/project/liked';
+//       if (tab === 'saved') endpoint = 'https://sparkswipebackend.onrender.com/api/v1/project/saved';
       
 //       const { data } = await axios.get(endpoint, {
 //         withCredentials: true,
@@ -449,7 +449,7 @@ const Profile = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/api/v1/user/getuser', {
+      const response = await axios.get('https://sparkswipebackend.onrender.com/api/v1/user/getuser', {
         withCredentials: true,
       });
 
@@ -467,9 +467,9 @@ const Profile = () => {
     setLoading(true);
     try {
       let endpoint = '';
-      if (tab === 'posted') endpoint = 'http://localhost:4000/api/v1/project/posted';
-      if (tab === 'liked') endpoint = 'http://localhost:4000/api/v1/project/liked';
-      if (tab === 'saved') endpoint = 'http://localhost:4000/api/v1/project/saved';
+      if (tab === 'posted') endpoint = 'https://sparkswipebackend.onrender.com/api/v1/project/posted';
+      if (tab === 'liked') endpoint = 'https://sparkswipebackend.onrender.com/api/v1/project/liked';
+      if (tab === 'saved') endpoint = 'https://sparkswipebackend.onrender.com/api/v1/project/saved';
       
       const { data } = await axios.get(endpoint, {
         withCredentials: true,
@@ -496,7 +496,7 @@ const Profile = () => {
       }
 
       const response = await axios.put(
-        'http://localhost:4000/api/v1/user/update_profile',
+        'https://sparkswipebackend.onrender.com/api/v1/user/update_profile',
         formData,
         {
           headers: {

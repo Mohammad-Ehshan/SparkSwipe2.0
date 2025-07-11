@@ -92,13 +92,13 @@ const IdeaDetail = () => {
         setLoading(true);
         
         // Fetch current user
-        const userResponse = await axios.get("http://localhost:4000/api/v1/user/getuser", {
+        const userResponse = await axios.get("https://sparkswipebackend.onrender.com/api/v1/user/getuser", {
          withCredentials: true,
         });
         setCurrentUser(userResponse.data.user);
         
         // Fetch project
-        const projectResponse = await axios.get(`http://localhost:4000/api/v1/project/${id}`,{
+        const projectResponse = await axios.get(`https://sparkswipebackend.onrender.com/api/v1/project/${id}`,{
           withCredentials: true,
         });
         setProject(projectResponse.data.project);
@@ -111,7 +111,7 @@ const IdeaDetail = () => {
         );
         
         // Fetch top-level comments
-        const commentsResponse = await axios.get(`http://localhost:4000/api/v1/interaction/comments/${id}`);
+        const commentsResponse = await axios.get(`https://sparkswipebackend.onrender.com/api/v1/interaction/comments/${id}`);
         setTopLevelComments(commentsResponse.data.comments);
       } catch (err) {
         setError("Failed to fetch data");
@@ -131,7 +131,7 @@ const IdeaDetail = () => {
     try {
       setIsSaving(true);
       await axios.post(
-        "http://localhost:4000/api/v1/interaction/bookmarks ",
+        "https://sparkswipebackend.onrender.com/api/v1/interaction/bookmarks ",
         { projectId: project._id },
         { withCredentials:true } 
       );
@@ -152,7 +152,7 @@ const IdeaDetail = () => {
 
     try {
       await axios.post(
-        "http://localhost:4000/api/v1/interaction/reports",
+        "https://sparkswipebackend.onrender.com/api/v1/interaction/reports",
         { projectId: project._id, reason },
         { withCredentials:true }
       );
@@ -169,7 +169,7 @@ const IdeaDetail = () => {
     try {
       setIsCommenting(true);
       const response = await axios.post(
-        "http://localhost:4000/api/v1/interaction/comments",
+        "https://sparkswipebackend.onrender.com/api/v1/interaction/comments",
         {
           projectId: project._id,
           text: newComment,
@@ -194,7 +194,7 @@ const IdeaDetail = () => {
     
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/interaction/comments",
+        "https://sparkswipebackend.onrender.com/api/v1/interaction/comments",
         {
           projectId: project._id,
           text: replyText,
@@ -223,7 +223,7 @@ const IdeaDetail = () => {
   // Fetch replies for a comment
   const fetchReplies = async (commentId: string) => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/v1/interaction/comments/replies/${commentId}`, {
+      const response = await axios.get(`https://sparkswipebackend.onrender.com/api/v1/interaction/comments/replies/${commentId}`, {
         headers: {withCredentials: true},
       });
       
@@ -242,7 +242,7 @@ const IdeaDetail = () => {
     
     try {
       await axios.post(
-        "http://localhost:4000/api/v1/interaction/comments/like",
+        "https://sparkswipebackend.onrender.com/api/v1/interaction/comments/like",
         { commentId },
         { withCredentials: true }
       );

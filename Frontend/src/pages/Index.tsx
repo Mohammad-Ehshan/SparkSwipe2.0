@@ -221,13 +221,7 @@ const Index = () => {
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl p-8 shadow-2xl">
                 <div className="bg-white rounded-xl p-6 text-center">
                   <div className="w-full h-80 bg-gradient-to-br from-green-50 to-green-100 rounded-lg flex items-center justify-center mb-4">
-                    <iframe
-                      width="560"
-                      height="315"
-                      src="https://www.youtube.com/embed/vn3rOSi5rVg?si=leiOofd43bC4jep7"
-                      title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    ></iframe>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/-onxtI0TkxA?si=oGY-kAAmoz2DwAqD" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                   </div>
                   <p className="text-gray-600">
                     Interactive demo of the swipe experience

@@ -16,7 +16,7 @@ const Saved = () => {
       setLoading(true);
       setError(null);
 
-      const response = await axios.get('http://localhost:4000/api/v1/project/saved', {
+      const response = await axios.get('https://sparkswipebackend.onrender.com/api/v1/project/saved', {
         withCredentials: true,
       });
       

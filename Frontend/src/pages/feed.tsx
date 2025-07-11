@@ -46,7 +46,7 @@ const Feed = () => {
         };
 
         const response = await axios.get(
-          "http://localhost:4000/api/v1/project/getall",
+          "https://sparkswipebackend.onrender.com/api/v1/project/getall",
           {
             params,
             withCredentials: true,

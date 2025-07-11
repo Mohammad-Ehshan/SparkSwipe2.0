@@ -83,7 +83,7 @@ const Explore = () => {
         setCurrentIndex(0);
       }
 
-      const res = await axios.get('http://localhost:4000/api/v1/swipe/next', {
+      const res = await axios.get('https://sparkswipebackend.onrender.com/api/v1/swipe/next', {
         withCredentials: true,
       });
 
@@ -104,7 +104,7 @@ const Explore = () => {
   const fetchTrendingProjects = async () => {
     try {
       setTrendingLoading(true);
-      const res = await axios.get('http://localhost:4000/api/v1/project/trending', {
+      const res = await axios.get('https://sparkswipebackend.onrender.com/api/v1/project/trending', {
         params: {
           limit: 10,
           timeWindow: 'weekly',
@@ -126,7 +126,7 @@ const Explore = () => {
   const fetchSwipeHistory = async () => {
     try {
       setSwipeHistoryLoading(true);
-      const res = await axios.get('http://localhost:4000/api/v1/swipe/history', {
+      const res = await axios.get('https://sparkswipebackend.onrender.com/api/v1/swipe/history', {
         params: {
           limit: 5
         },
@@ -158,7 +158,7 @@ const Explore = () => {
         direction === 'right' ? 'like' : 
         direction === 'left' ? 'dislike' : 'skip';
       
-      await axios.post('http://localhost:4000/api/v1/swipe/', {
+      await axios.post('https://sparkswipebackend.onrender.com/api/v1/swipe/', {
         projectId: currentProject._id,
         action
       }, {
@@ -187,7 +187,7 @@ const Explore = () => {
     
     try {
       // FIXED: Changed to DELETE request to correct endpoint
-      await axios.delete('http://localhost:4000/api/v1/swipe/last', {
+      await axios.delete('https://sparkswipebackend.onrender.com/api/v1/swipe/last', {
         withCredentials: true
       });
 

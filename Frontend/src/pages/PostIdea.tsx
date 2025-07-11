@@ -23,7 +23,7 @@ const PostIdea = () => {
       }
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/getuser",
+          "https://sparkswipebackend.onrender.com/api/v1/user/getuser",
           {
             withCredentials: true,
           }
@@ -111,7 +111,7 @@ const PostIdea = () => {
       if (formData.image) data.append("file", formData.image);
 
       const response = await axios.post(
-        "http://localhost:4000/api/v1/project/post",
+        "https://sparkswipebackend.onrender.com/api/v1/project/post",
         data,
         {
           headers: {
